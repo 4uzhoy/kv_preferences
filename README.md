@@ -180,7 +180,7 @@ class MultiStepMigrator extends KeyValuePreferencesMigrator {
 }
 ```
 
-### If migration is required and no migrator is provided — throws MigrationNotPassedException. 
+#### ❗ If migration is required and no migrator is provided — throws `MigrationNotPassedException`. 
 
 
 ## 🧭 Grouped keys
