@@ -1,0 +1,14 @@
+name: kv_preferences_example
+publish_to: "none"
+environment:
+  sdk: ^3.7.2
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  kv_preferences:
+    path: ../
+
+flutter:
+  uses-material-design: true
