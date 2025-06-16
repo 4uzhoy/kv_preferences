@@ -118,7 +118,7 @@ final class User {
   int get hashCode => name.hashCode ^ age.hashCode;
 }
 
-class TestMigrator extends KeyValuePreferencesMigrator {
+class TestMigrator implements KeyValuePreferencesMigrator {
   final KeyValuePreferences store;
 
   TestMigrator(this.store);
@@ -144,7 +144,7 @@ class TestMigrator extends KeyValuePreferencesMigrator {
   }
 }
 
-class TestMigratorNoOp extends KeyValuePreferencesMigrator {
+class TestMigratorNoOp implements KeyValuePreferencesMigrator {
   @override
   Future<bool> needsMigration(int fromVersion) async => false;
 
@@ -154,7 +154,7 @@ class TestMigratorNoOp extends KeyValuePreferencesMigrator {
   }
 }
 
-class MultiStepMigrator extends KeyValuePreferencesMigrator {
+class MultiStepMigrator implements KeyValuePreferencesMigrator {
   final KeyValuePreferences store;
   final List<int> stepsCalled = [];
 
@@ -183,7 +183,7 @@ class MultiStepMigrator extends KeyValuePreferencesMigrator {
   }
 }
 
-class FailingMigrator extends KeyValuePreferencesMigrator {
+class FailingMigrator implements KeyValuePreferencesMigrator {
   @override
   Future<bool> needsMigration(int fromVersion) async => true;
 

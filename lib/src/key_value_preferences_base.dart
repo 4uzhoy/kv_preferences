@@ -7,6 +7,9 @@ import 'package:kv_preferences/src/key_value_preferences.dart';
 /// key-value preferences with versioning and initialization capabilities.
 /// {@endtemplate}
 abstract base class KeyValuePreferencesBase implements KeyValuePreferences {
+  /// allows subclasses to initialize the store.
+  KeyValuePreferencesBase();
+
   /// Initializes the underlying store.
   /// indicates whether the store has been initialized.
   bool isInited = false;

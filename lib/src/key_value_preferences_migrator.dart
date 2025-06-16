@@ -4,7 +4,7 @@
 /// This class provides methods to migrate the store from one version to another,
 /// and to check if migration is needed based on the current store version.
 /// {@endtemplate}
-abstract class KeyValuePreferencesMigrator {
+abstract interface class KeyValuePreferencesMigrator {
   /// Migrates the store from the current version to the specified [toVersion].
   ///
   /// The [fromVersion] is the current version of the store.
