@@ -16,7 +16,13 @@ Future<void> main() async {
   );
 
   // Write primitive
-  await store.write(tokenKey, 'abc123');
+  await store.write<String>(tokenKey, 'abc123');
+  // await store.write<int>(tokenKey, 10); // This line is incorrect and will cause a type error, as the key expects a String.
+  await store.write(
+    tokenKey,
+    10, // This line is incorrect and will cause a type error, as the key expects a String.
+  ); // Be careful with types! That's OK for compilation, but not for runtime.
+  // throw ArgumentError if the type does not match the key type.
 
   // Read primitive
   final token = store.read(tokenKey);

@@ -47,7 +47,7 @@ final store = KeyValueSharedPreferences();
 await store.initialization(version: 1);
 
 final key = KeyPreferences<String>('token');
-await store.write(key, 'abc123');
+await store.write<String>(key, 'abc123');
 final token = store.read(key); // 'abc123'
 ```
 
@@ -164,16 +164,16 @@ class MultiStepMigrator extends KeyValuePreferencesMigrator {
     stepsCalled.add(fromVersion);
     switch (fromVersion) {
       case 1:
-        await store.write(KeyPreferencesGroup$Test.intValue, 101);
+        await store.write<int>(KeyPreferencesGroup$Test.intValue, 101);
         break;
       case 2:
-        await store.write(KeyPreferencesGroup$Test.intValue, 102);
+        await store.write<int>(KeyPreferencesGroup$Test.intValue, 102);
         break;
       case 3:
-        await store.write(KeyPreferencesGroup$Test.intValue, 103);
+        await store.write<int>(KeyPreferencesGroup$Test.intValue, 103);
         break;
       case 4:
-        await store.write(KeyPreferencesGroup$Test.intValue, 104);
+        await store.write<int>(KeyPreferencesGroup$Test.intValue, 104);
         break;
     }
   }

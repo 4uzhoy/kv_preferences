@@ -1,7 +1,6 @@
 name: kv_preferences
 description: Type-safe key-value storage over SharedPreferences with migration support.
 version: 1.0.0
-publish_to: https://github.com/4uzhoy/kv_preferences
 repository: https://github.com/4uzhoy/kv_preferences
 issue_tracker: https://github.com/4uzhoy/kv_preferences/issues
 homepage: https://github.com/4uzhoy/kv_preferences
